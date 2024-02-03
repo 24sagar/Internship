@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+  {% block content %}
+		<div id="fh5co-intro-section" class="section-overlay animate-box" data-animate-effect="fadeIn">
+			<div class="fh5co-intro-cover text-center" data-stellar-background-ratio="0.5" style="background-image: url(/static/images/13.png);">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 float-overlay">
+							<h2>Our Services</h2>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END fh5co-intro-section -->
+		<div id="fh5co-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-10 col-md-offset-1">
+						{% for n in servicedata %}
+						<div class="col-md-6 animate-box">
+							<div class="fh5co-inner fh5co-services">
+								<i class="{{n.service_icon}}"></i>
+								<div class="holder-section">
+									<h3>{{n.service_title}}</h3>
+									<p>
+                                   {{n.service_dec}}</p>
+								</div>
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+		{% endblock %}
+
+{% comment %} Okay {% endcomment %}
